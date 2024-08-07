@@ -33,10 +33,9 @@ def get_pitch(accel_x, accel_y, accel_z):
     return pitch
 
 while True:
-    accel_x_raw = read_word_2c(bus, MPU6050_RA_ACCEL_XOUT_H)  # Используем bus
-    accel_y_raw = read_word_2c(bus, MPU6050_RA_ACCEL_YOUT_H)  # Используем bus
-    accel_z_raw = read_word_2c(bus, MPU6050_RA_ACCEL_ZOUT_H)  # Используем bus
-
+    accel_x_raw = read_word_2c(bus, MPU6050_RA_ACCEL_XOUT_H)  
+    accel_y_raw = read_word_2c(bus, MPU6050_RA_ACCEL_YOUT_H) 
+    accel_z_raw = read_word_2c(bus, MPU6050_RA_ACCEL_ZOUT_H)  
     accel_x = accel_x_raw / ACCEL_SCALE
     accel_y = accel_y_raw / ACCEL_SCALE
     accel_z = accel_z_raw / ACCEL_SCALE
