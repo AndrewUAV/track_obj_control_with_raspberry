@@ -29,7 +29,7 @@ class PPMGenerator:
 
         
         for i in self._widths:
-            # Высокий импульс
+
             self.pin.on()
             time.sleep(self.GAP / 1000000.0)  
             micros += self.GAP
